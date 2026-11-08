@@ -3,14 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>СТРОЙГИД — Строительная компания</title>
+<title>СТРОЙГИД — строительная компания, Ханты-Мансийск</title>
+<meta name="description" content="ООО «СТРОЙГИД», Ханты-Мансийск: монтаж фасадов, вентиляции, электрики, водоснабжения и канализации в частных домах. Работаем по договору с гарантией от 1 года. Цены без НДС (АУСН).">
+<link rel="canonical" href="https://vovaxant-star.github.io/stroygid-site/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#2B2B2B">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="СТРОЙГИД">
+<meta property="og:title" content="СТРОЙГИД — фасады, вентиляция, электрика в Ханты-Мансийске">
+<meta property="og:description" content="ООО «СТРОЙГИД», Ханты-Мансийск: монтаж фасадов, вентиляции, электрики, водоснабжения и канализации в частных домах. Работаем по договору с гарантией от 1 года. Цены без НДС (АУСН).">
+<meta property="og:url" content="https://vovaxant-star.github.io/stroygid-site/">
+<meta property="og:image" content="https://vovaxant-star.github.io/stroygid-site/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --yellow: #F5C518;
+    --yellow: #F5C400;
     --yellow-dark: #D4A800;
-    --yellow-glow: rgba(245,197,24,0.3);
+    --yellow-glow: rgba(245,196,0,0.3);
     --dark: #1A1A1A;
     --dark2: #232323;
     --dark3: #2D2D2D;
@@ -42,7 +57,7 @@
     justify-content: space-between;
     background: rgba(26,26,26,0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(245,197,24,0.15);
+    border-bottom: 1px solid rgba(245,196,0,0.15);
   }
 
   .logo {
@@ -123,8 +138,8 @@
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(245,197,24,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(245,197,24,0.04) 1px, transparent 1px);
+      linear-gradient(rgba(245,196,0,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,196,0,0.04) 1px, transparent 1px);
     background-size: 60px 60px;
     pointer-events: none;
   }
@@ -133,7 +148,7 @@
     position: absolute;
     top: -200px; right: -200px;
     width: 700px; height: 700px;
-    background: radial-gradient(circle, rgba(245,197,24,0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(245,196,0,0.12) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -141,8 +156,8 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(245,197,24,0.1);
-    border: 1px solid rgba(245,197,24,0.3);
+    background: rgba(245,196,0,0.1);
+    border: 1px solid rgba(245,196,0,0.3);
     color: var(--yellow);
     font-size: 11px;
     font-weight: 700;
@@ -360,12 +375,12 @@
   .service-num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 64px;
-    color: rgba(245,197,24,0.08);
+    color: rgba(245,196,0,0.08);
     line-height: 1;
     margin-bottom: 20px;
     transition: color 0.3s;
   }
-  .service-card:hover .service-num { color: rgba(245,197,24,0.15); }
+  .service-card:hover .service-num { color: rgba(245,196,0,0.15); }
 
   .service-icon {
     font-size: 32px;
@@ -400,7 +415,7 @@
     position: absolute;
     top: -300px; left: -300px;
     width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(245,197,24,0.07) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(245,196,0,0.07) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -519,7 +534,7 @@
 
   .estimate-card {
     background: var(--dark2);
-    border: 1px solid rgba(245,197,24,0.15);
+    border: 1px solid rgba(245,196,0,0.15);
     padding: 44px;
     position: relative;
   }
@@ -561,9 +576,9 @@
     content: '✓';
     width: 22px;
     height: 22px;
-    background: rgba(245,197,24,0.15);
+    background: rgba(245,196,0,0.15);
     color: var(--yellow);
-    border: 1px solid rgba(245,197,24,0.4);
+    border: 1px solid rgba(245,196,0,0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -651,7 +666,7 @@
 
   .contacts-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 60px;
     align-items: start;
   }
@@ -724,10 +739,23 @@
     transform: translateY(0);
   }
 
+  /* ===== МОБИЛЬНОЕ МЕНЮ ===== */
+  .burger { display: none; background: none; border: 0; cursor: pointer; padding: 10px; margin-left: 12px; }
+  .burger span { display: block; width: 24px; height: 2px; background: var(--yellow); margin: 5px 0; transition: .25s; }
+  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .todo { color: var(--yellow); }
+
   /* ===== MOBILE ===== */
   @media (max-width: 900px) {
     header { padding: 0 20px; }
-    nav { display: none; }
+    nav { display: none; position: absolute; top: 70px; left: 0; right: 0; flex-direction: column; gap: 0;
+          background: rgba(26,26,26,0.98); border-bottom: 1px solid rgba(245,196,0,0.2); }
+    nav.open { display: flex; }
+    nav a { padding: 18px 24px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 14px; }
+    .burger { display: block; }
+    .header-cta { padding: 9px 12px; font-size: 10px; }
     .hero { padding: 100px 24px 60px; }
     section { padding: 60px 24px; }
     .services-grid { grid-template-columns: 1fr; gap: 2px; }
@@ -748,9 +776,9 @@
 <header>
   <a href="#" class="logo">
     <svg class="logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="22,4 42,20 4,20" fill="#F5C518"/>
-      <rect x="8" y="20" width="28" height="20" fill="#2D2D2D" stroke="#F5C518" stroke-width="1.5"/>
-      <rect x="17" y="28" width="10" height="12" fill="#F5C518"/>
+      <polygon points="22,4 42,20 4,20" fill="#F5C400"/>
+      <rect x="8" y="20" width="28" height="20" fill="#2D2D2D" stroke="#F5C400" stroke-width="1.5"/>
+      <rect x="17" y="28" width="10" height="12" fill="#F5C400"/>
       <line x1="22" y1="8" x2="32" y2="16" stroke="#1A1A1A" stroke-width="2.5"/>
       <circle cx="33" cy="15" r="3" fill="#1A1A1A"/>
     </svg>
@@ -766,6 +794,7 @@
     <a href="#contacts">Контакты</a>
   </nav>
   <a href="#zayavka" class="header-cta">Получить смету</a>
+  <button class="burger" aria-label="Меню" aria-expanded="false" onclick="toggleMenu(this)"><span></span><span></span><span></span></button>
 </header>
 
 <!-- HERO -->
@@ -774,13 +803,13 @@
   <div class="hero-glow"></div>
   <div class="hero-visual">
     <svg viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="190,20 370,120 370,280 190,360 10,280 10,120" fill="none" stroke="#F5C518" stroke-width="1"/>
-      <polygon points="190,60 330,140 330,260 190,320 50,260 50,140" fill="none" stroke="#F5C518" stroke-width="0.5"/>
-      <line x1="190" y1="20" x2="190" y2="360" stroke="#F5C518" stroke-width="0.5"/>
-      <line x1="10" y1="120" x2="370" y2="280" stroke="#F5C518" stroke-width="0.5"/>
-      <line x1="370" y1="120" x2="10" y2="280" stroke="#F5C518" stroke-width="0.5"/>
-      <circle cx="190" cy="190" r="60" fill="none" stroke="#F5C518" stroke-width="1"/>
-      <circle cx="190" cy="190" r="8" fill="#F5C518"/>
+      <polygon points="190,20 370,120 370,280 190,360 10,280 10,120" fill="none" stroke="#F5C400" stroke-width="1"/>
+      <polygon points="190,60 330,140 330,260 190,320 50,260 50,140" fill="none" stroke="#F5C400" stroke-width="0.5"/>
+      <line x1="190" y1="20" x2="190" y2="360" stroke="#F5C400" stroke-width="0.5"/>
+      <line x1="10" y1="120" x2="370" y2="280" stroke="#F5C400" stroke-width="0.5"/>
+      <line x1="370" y1="120" x2="10" y2="280" stroke="#F5C400" stroke-width="0.5"/>
+      <circle cx="190" cy="190" r="60" fill="none" stroke="#F5C400" stroke-width="1"/>
+      <circle cx="190" cy="190" r="8" fill="#F5C400"/>
     </svg>
   </div>
 
@@ -791,7 +820,7 @@
   <p class="hero-sub">
     Профессиональный монтаж фасадов, вентиляции, электрики,
     водоснабжения и канализации в частных домах.
-    Получите точную смету за 5 минут — прямо в Telegram.
+    Оставьте заявку — посчитаем смету по нашему прайсу без НДС (АУСН).
   </p>
 
   <div class="hero-actions">
@@ -870,28 +899,23 @@
 
 <!-- КАК РАБОТАЕТ БОТ -->
 <section class="bot-section" id="how">
-  <div class="section-label">Telegram-бот</div>
+  <div class="section-label">Как работаем</div>
   <h2 class="section-title">КАК ПОЛУЧИТЬ <span>СМЕТУ</span></h2>
-  <div class="bot-steps reveal">
+  <div class="bot-steps reveal" style="grid-template-columns: repeat(3, 1fr);">
     <div class="bot-step">
       <div class="step-circle"><span class="step-emoji">💬</span></div>
-      <div class="step-title">Открываете бота</div>
-      <div class="step-desc">Переходите в наш Telegram-бот по кнопке ниже. Никаких регистраций.</div>
+      <div class="step-title">Оставляете заявку</div>
+      <div class="step-desc">Через форму на сайте или по телефону. Опишите работы и адрес объекта.</div>
     </div>
     <div class="bot-step">
       <div class="step-circle"><span class="step-emoji">📐</span></div>
-      <div class="step-title">Вводите параметры</div>
-      <div class="step-desc">Выбираете вид работ, тип дома и указываете площадь или размеры.</div>
-    </div>
-    <div class="bot-step">
-      <div class="step-circle"><span class="step-emoji">💳</span></div>
-      <div class="step-title">Оплата 500 ₽</div>
-      <div class="step-desc">Оплачиваете расчёт онлайн — картой или СБП. Безопасно через Getplatinum.</div>
+      <div class="step-title">Уточняем объём</div>
+      <div class="step-desc">Перезваниваем, уточняем площади, размеры и чьи материалы.</div>
     </div>
     <div class="bot-step">
       <div class="step-circle"><span class="step-emoji">📄</span></div>
       <div class="step-title">Получаете смету</div>
-      <div class="step-desc">Готовая смета с материалами и работами — сразу в чат. PDF для печати.</div>
+      <div class="step-desc">Смета по разделам, итог без НДС (АУСН). PDF для печати и подписания.</div>
     </div>
   </div>
 </section>
@@ -900,16 +924,11 @@
 <section class="estimate-section" id="estimate">
   <div class="estimate-inner">
     <div class="estimate-text">
-      <div class="section-label">Стоимость расчёта</div>
+      <div class="section-label">Смета</div>
       <h2 class="section-title">ТОЧНАЯ СМЕТА<br>ЗА <span>5 МИНУТ</span></h2>
-      <div class="price-badge">
-        <span class="amount">500</span>
-        <span class="currency">₽</span>
-        <span class="note">/ расчёт</span>
-      </div>
-      <p>
-        Наш бот рассчитывает смету на основе реальных договоров и прайсов.
-        Вы получаете детальный расчёт материалов и работ — как у профессионального сметчика.
+            <p>
+        Считаем смету на основе реальных договоров и нашего прайса по Ханты-Мансийску.
+        Вы получаете детальный расчёт работ — как у профессионального сметчика.
       </p>
       <a href="#zayavka" class="btn-primary">
         Рассчитать сейчас →
@@ -933,12 +952,10 @@
 <!-- CTA -->
 <div class="cta-section">
   <h2>ГОТОВЫ НАЧАТЬ<br>СТРОИТЕЛЬСТВО?</h2>
-  <p>Рассчитайте смету прямо сейчас — это займёт 5 минут</p>
+  <p>Оставьте заявку — перезвоним и посчитаем смету</p>
   <a href="#zayavka" class="btn-dark">
-    <svg class="tg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/>
-    </svg>
-    Открыть Telegram-бот
+    
+    Оставить заявку
   </a>
 </div>
 
@@ -961,9 +978,9 @@
     <div class="contact-brand">
       <div class="logo">
         <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-          <polygon points="22,4 42,20 4,20" fill="#F5C518"/>
-          <rect x="8" y="20" width="28" height="20" fill="#2D2D2D" stroke="#F5C518" stroke-width="1.5"/>
-          <rect x="17" y="28" width="10" height="12" fill="#F5C518"/>
+          <polygon points="22,4 42,20 4,20" fill="#F5C400"/>
+          <rect x="8" y="20" width="28" height="20" fill="#2D2D2D" stroke="#F5C400" stroke-width="1.5"/>
+          <rect x="17" y="28" width="10" height="12" fill="#F5C400"/>
         </svg>
         <div class="logo-text">
           <span>СТРОЙГИД</span>
@@ -983,14 +1000,34 @@
       <p>Коновалов<br>Владимир Николаевич</p>
       <p style="margin-top:12px">Генеральный директор<br>ООО «СТРОЙГИД»</p>
     </div>
+    <div class="contact-col">
+      <h4>Реквизиты</h4>
+      <p>ООО «СТРОЙГИД»<br>ИНН 8601075654</p>
+      <!-- ⚠ ОГРН и юридический адрес пришлёт владелец — до этого стоят пометки -->
+      <p>ОГРН: <span class="todo">уточняется</span><br>Юр. адрес: <span class="todo">уточняется</span>, г. Ханты-Мансийск</p>
+      <p>Без НДС (АУСН)</p>
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </div>
   </div>
   <div class="footer-bottom">
     <p>© 2026 ООО «СТРОЙГИД». Все права защищены.</p>
-    <p>Работаем по договору с гарантией от 1 года</p>
+    <p>Работаем по договору с гарантией от 1 года · цены без НДС (АУСН)</p>
   </div>
 </div>
 
 <script>
+  // Мобильное меню
+  function toggleMenu(btn) {
+    const nav = document.querySelector('nav');
+    const open = nav.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+  }
+  document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => {
+    document.querySelector('nav').classList.remove('open');
+    const b = document.querySelector('.burger'); b.classList.remove('open'); b.setAttribute('aria-expanded', false);
+  }));
+
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
