@@ -722,22 +722,11 @@
 
   /* ===== ФОРМА ЗАЯВКИ (Яндекс Формы) ===== */
   .form-section { background: var(--dark2); }
-  #ya-form { max-width: 820px; background: var(--white); padding: 8px; }
-  #ya-form iframe { width: 100%; min-height: 560px; border: 0; display: block; }
-  #ya-form .form-fallback { color: var(--dark); font-size: 16px; font-weight: 600; line-height: 1.8; padding: 24px; }
-  #ya-form .form-fallback a { color: var(--dark); }
-
-  /* ===== SCROLL REVEAL ===== */
-  .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  #ya-form { max-width: 820px; background: var(--white); border-left: 4px solid var(--yellow); }
+  #ya-form iframe { display: block; width: 100%; height: 750px; border: 0; }
+  .form-alt { margin-top: 20px; color: var(--grey); font-size: 14px; font-weight: 500; }
+  .form-alt a { color: var(--yellow); text-decoration: none; }
+  @media (max-width: 600px) { #ya-form iframe { height: 900px; } }
 
   /* ===== МОБИЛЬНОЕ МЕНЮ ===== */
   .burger { display: none; background: none; border: 0; cursor: pointer; padding: 10px; margin-left: 12px; }
@@ -745,7 +734,6 @@
   .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .burger.open span:nth-child(2) { opacity: 0; }
   .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-  .todo { color: var(--yellow); }
 
   /* ===== MOBILE ===== */
   @media (max-width: 900px) {
@@ -793,7 +781,7 @@
     <a href="#estimate">Смета</a>
     <a href="#contacts">Контакты</a>
   </nav>
-  <a href="#zayavka" class="header-cta">Получить смету</a>
+  <a href="#estimate" class="header-cta">Получить смету</a>
   <button class="burger" aria-label="Меню" aria-expanded="false" onclick="toggleMenu(this)"><span></span><span></span><span></span></button>
 </header>
 
@@ -824,7 +812,7 @@
   </p>
 
   <div class="hero-actions">
-    <a href="#zayavka" class="btn-primary">
+    <a href="#estimate" class="btn-primary">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
       Рассчитать смету
     </a>
@@ -921,7 +909,7 @@
 </section>
 
 <!-- СМЕТА -->
-<section class="estimate-section" id="estimate">
+<section class="estimate-section" id="smeta">
   <div class="estimate-inner">
     <div class="estimate-text">
       <div class="section-label">Смета</div>
@@ -930,7 +918,7 @@
         Считаем смету на основе реальных договоров и нашего прайса по Ханты-Мансийску.
         Вы получаете детальный расчёт работ — как у профессионального сметчика.
       </p>
-      <a href="#zayavka" class="btn-primary">
+      <a href="#estimate" class="btn-primary">
         Рассчитать сейчас →
       </a>
     </div>
@@ -953,23 +941,22 @@
 <div class="cta-section">
   <h2>ГОТОВЫ НАЧАТЬ<br>СТРОИТЕЛЬСТВО?</h2>
   <p>Оставьте заявку — перезвоним и посчитаем смету</p>
-  <a href="#zayavka" class="btn-dark">
+  <a href="#estimate" class="btn-dark">
     
     Оставить заявку
   </a>
 </div>
 
-<!-- ЗАЯВКА: Яндекс Формы (данные хранятся в России, 152-ФЗ). Письмо с заявкой приходит на почту владельца.
-     Чтобы включить форму, впишите её адрес в data-form, например
-     data-form="https://forms.yandex.ru/cloud/1234567890abcdef/" — остальное сделает скрипт внизу страницы. -->
-<section class="form-section" id="zayavka">
-  <div class="section-label">Заявка</div>
+<!-- ЗАЯВКА: Яндекс Форма (данные хранятся в России, 152-ФЗ); ответы приходят на stroy_gid86@mail.ru -->
+<section class="form-section" id="estimate">
+  <div class="section-label">Заявка на смету</div>
   <h2 class="section-title">ОСТАВЬТЕ <span>ЗАЯВКУ</span></h2>
-  <div id="ya-form" class="reveal" data-form="">
-    <p class="form-fallback">Оставить заявку можно по телефону
-      <a href="tel:+79324291194">+7 (932) 429-11-94</a> или на почту
-      <a href="mailto:stroy_gid86@mail.ru">stroy_gid86@mail.ru</a>.</p>
+  <div id="ya-form" class="reveal">
+    <iframe src="https://forms.yandex.ru/u/6af057afba5f0259636bfe00/?iframe=1" name="ya-form-6af057afba5f0259636bfe00" title="Заявка на смету — СТРОЙГИД"
+            loading="lazy" allow="clipboard-write"></iframe>
   </div>
+  <p class="form-alt">Или позвоните: <a href="tel:+79324291194">+7 (932) 429-11-94</a> · почта
+     <a href="mailto:stroy_gid86@mail.ru">stroy_gid86@mail.ru</a></p>
 </section>
 
 <!-- КОНТАКТЫ -->
@@ -993,7 +980,7 @@
       <h4>Контакты</h4>
       <a href="tel:+79324291194">+7 (932) 429-11-94</a>
       <a href="mailto:stroy_gid86@mail.ru">stroy_gid86@mail.ru</a>
-      <a href="#zayavka">Оставить заявку</a>
+      <a href="#estimate">Оставить заявку</a>
     </div>
     <div class="contact-col">
       <h4>Руководитель</h4>
@@ -1003,8 +990,7 @@
     <div class="contact-col">
       <h4>Реквизиты</h4>
       <p>ООО «СТРОЙГИД»<br>ИНН 8601075654</p>
-      <!-- ⚠ ОГРН и юридический адрес пришлёт владелец — до этого стоят пометки -->
-      <p>ОГРН: <span class="todo">уточняется</span><br>Юр. адрес: <span class="todo">уточняется</span>, г. Ханты-Мансийск</p>
+      <p>ОГРН 1248600007501<br>Юр. адрес: г. Ханты-Мансийск, ул. Светлая, д. 69, кв. 111</p>
       <p>Без НДС (АУСН)</p>
       <a href="privacy.html">Политика конфиденциальности</a>
     </div>
@@ -1039,19 +1025,7 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
-  // Яндекс Форма: если в data-form указан адрес — встраиваем её вместо телефона и почты
-  (function () {
-    const box = document.getElementById('ya-form');
-    const url = box && box.dataset.form;
-    if (!url) return;
-    const id = (url.match(/forms\.yandex\.ru\/(?:cloud|u)\/([0-9a-f]+)/i) || [])[1];
-    if (!id) return;
-    const s = document.createElement('script');
-    s.src = 'https://forms.yandex.ru/_static/embed.js';
-    document.head.appendChild(s);
-    box.innerHTML = '<iframe src="https://forms.yandex.ru/cloud/' + id + '/?iframe=1" name="ya-form-' + id +
-                    '" title="Заявка СТРОЙГИД"></iframe>';
-  })();
+  // Яндекс Форма встроена iframe-ом; embed.js подгоняет высоту под содержимое
 
   // Параллакс hero glow
   document.addEventListener('mousemove', (e) => {
@@ -1062,5 +1036,6 @@
     glow.style.transform = `translate(${x}px, ${y}px)`;
   });
 </script>
+<script src="https://forms.yandex.ru/_static/embed.js"></script>
 </body>
 </html>
