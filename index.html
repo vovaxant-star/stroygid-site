@@ -723,10 +723,13 @@
   /* ===== ФОРМА ЗАЯВКИ (Яндекс Формы) ===== */
   .form-section { background: var(--dark2); }
   #ya-form { max-width: 820px; background: var(--white); border-left: 4px solid var(--yellow); }
-  #ya-form iframe { display: block; width: 100%; height: 750px; border: 0; }
+  #ya-form { overflow: hidden; }
+  #ya-form iframe { display: block; width: 100%; height: 1300px !important; border: 0; overflow: hidden; }
   .form-alt { margin-top: 20px; color: var(--grey); font-size: 14px; font-weight: 500; }
   .form-alt a { color: var(--yellow); text-decoration: none; }
-  @media (max-width: 600px) { #ya-form iframe { height: 900px; } }
+  @media (max-width: 600px) { #ya-form iframe { height: 1600px !important; } }
+  .eml { cursor: pointer; }
+
 
   /* ===== МОБИЛЬНОЕ МЕНЮ ===== */
   .burger { display: none; background: none; border: 0; cursor: pointer; padding: 10px; margin-left: 12px; }
@@ -947,16 +950,16 @@
   </a>
 </div>
 
-<!-- ЗАЯВКА: Яндекс Форма (данные хранятся в России, 152-ФЗ); ответы приходят на stroy_gid86@mail.ru -->
+<!-- ЗАЯВКА: Яндекс Форма (данные хранятся в России, 152-ФЗ) -->
 <section class="form-section" id="estimate">
   <div class="section-label">Заявка на смету</div>
   <h2 class="section-title">ОСТАВЬТЕ <span>ЗАЯВКУ</span></h2>
   <div id="ya-form" class="reveal">
     <iframe src="https://forms.yandex.ru/u/6af057afba5f0259636bfe00/?iframe=1" name="ya-form-6af057afba5f0259636bfe00" title="Заявка на смету — СТРОЙГИД"
-            loading="lazy" allow="clipboard-write"></iframe>
+            scrolling="no" allow="clipboard-write"></iframe>
   </div>
   <p class="form-alt">Или позвоните: <a href="tel:+79324291194">+7 (932) 429-11-94</a> · почта
-     <a href="mailto:stroy_gid86@mail.ru">stroy_gid86@mail.ru</a></p>
+     <a class="eml" data-u="vovaxant" data-d="gmail.com" href="#contacts">vovaxant [собака] gmail.com</a></p>
 </section>
 
 <!-- КОНТАКТЫ -->
@@ -979,7 +982,7 @@
     <div class="contact-col">
       <h4>Контакты</h4>
       <a href="tel:+79324291194">+7 (932) 429-11-94</a>
-      <a href="mailto:stroy_gid86@mail.ru">stroy_gid86@mail.ru</a>
+      <a class="eml" data-u="vovaxant" data-d="gmail.com" href="#contacts">vovaxant [собака] gmail.com</a>
       <a href="#estimate">Оставить заявку</a>
     </div>
     <div class="contact-col">
@@ -1025,7 +1028,13 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
-  // Яндекс Форма встроена iframe-ом; embed.js подгоняет высоту под содержимое
+  // Яндекс Форма встроена iframe-ом фиксированной высоты (1300 / 1600 px на телефоне)
+  // Почта: адрес собирается из частей, чтобы сборщики адресов не нашли его в коде страницы
+  document.querySelectorAll('.eml').forEach(function (a) {
+    var addr = a.dataset.u + '@' + a.dataset.d;
+    a.href = 'mailto:' + addr;
+    a.textContent = addr;
+  });
 
   // Параллакс hero glow
   document.addEventListener('mousemove', (e) => {
@@ -1036,6 +1045,5 @@
     glow.style.transform = `translate(${x}px, ${y}px)`;
   });
 </script>
-<script src="https://forms.yandex.ru/_static/embed.js"></script>
 </body>
 </html>
